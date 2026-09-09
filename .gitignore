@@ -1,0 +1,16 @@
+# Build outputs
+firmware/_build/
+firmware/out/
+
+# IDE/Editor
+.vscode/*.json
+!.vscode/HVAC.mplab.json
+*.swp
+*~
+
+# Temporary files
+~$*
+*.tmp
+
+# Clangd cache
+.cache/
