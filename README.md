@@ -46,6 +46,32 @@ hardware/
 └── PINMAPPING.xlsx       # Pin assignment spreadsheet
 ```
 
+## Application Flow
+
+On power-up, the firmware initializes the display and starts the main loop:
+
+1. **Counter Mode**: The 7-segment display shows a counter (00-99) that increments every second
+2. **Switch Detection**: When any switch (S1-S7) is pressed, the display immediately shows the switch number (1-7)
+3. **Resume Counter**: When no switch is pressed, the counter resumes from where it left off
+
+### Switch Mapping
+
+| Switch | Segment Pin | Display Value |
+|--------|-------------|---------------|
+| S1     | B (PA00)    | 1             |
+| S2     | F (PA04)    | 2             |
+| S3     | G (PA22)    | 3             |
+| S4     | DP (PA10)   | 4             |
+| S5     | E (PA11)    | 5             |
+| S6     | D (PA18)    | 6             |
+| S7     | C (PA19)    | 7             |
+
+### Timing
+
+- Display refresh: 6ms per digit (12ms full cycle)
+- Switch scan: Every 24ms with debounce
+- Counter update: Every 1 second
+
 ## License
 
 Proprietary - Microchip Technology Inc.

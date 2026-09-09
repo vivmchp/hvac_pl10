@@ -29,7 +29,8 @@ set(HVAC_default_default_XC32_FILE_TYPE_compile
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../config.mcc/src/config/default/stdio/xc32_monitor.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../config.mcc/src/main.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../config.mcc/src/segment_pins.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../../../config.mcc/src/seven_seg.c")
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../config.mcc/src/seven_seg.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../config.mcc/src/switch.c")
 set_source_files_properties(${HVAC_default_default_XC32_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
 set(HVAC_default_default_XC32_FILE_TYPE_compile_cpp)
 set_source_files_properties(${HVAC_default_default_XC32_FILE_TYPE_compile_cpp} PROPERTIES LANGUAGE CXX)
